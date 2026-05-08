@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AI Comics Generator</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; }
+      textarea { width: 100%; height: 160px; }
+      input, select { padding: 8px; }
+    </style>
+  </head>
+  <body>
+    <h1>AI Comics Generator</h1>
+    <form action="/generate" method="post">
+      <label>Title<br /><input type="text" name="title" placeholder="My Comic" /></label>
+      <p>Enter one prompt per panel (each line becomes a panel):</p>
+      <textarea name="prompts">A hero enters the city.
+A comedic sidekick trips over a banana.
+A dramatic showdown at sunset.</textarea>
+      <p>
+        <label>Columns
+          <select name="columns">
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+          </select>
+        </label>
+      </p>
+      <p><button type="submit">Generate Comic</button></p>
+    </form>
+  </body>
+</html>
